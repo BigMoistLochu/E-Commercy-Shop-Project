@@ -1,0 +1,31 @@
+<div th:fragment="register_modal" class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Formularz rejestracji -->
+                <form action="/register" method="post">
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Name</label>
+                        <input name="name" type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail" class="form-label">Email address</label>
+                        <input name="email" type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword" class="form-label">Password</label>
+                        <input name="password" type="password" class="form-control" id="exampleInputPassword">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="button" id="loginBtn" class="btn btn-primary">Log In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,11 +16,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String name;
 
     private UserCredentials userCredentials;
 
     public User(String name, UserCredentials userCredentials) {
+        if(name.isBlank() || name.isEmpty())
+            throw new IllegalArgumentException("Name field cant be blank");
         this.name = name;
         this.userCredentials = userCredentials;
     }

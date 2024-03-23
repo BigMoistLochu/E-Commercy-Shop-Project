@@ -15,6 +15,8 @@ public class UserCredentials {
 
     @Column(unique = true)
     private String email;
+
+    @Column(length = 25)
     private String password;
 
     public UserCredentials(String email,String password)
